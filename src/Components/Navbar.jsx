@@ -3,13 +3,28 @@ import logo from "../images/logo.png";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "-100%" },
-};
 
 const Navbar = () => {
   const [navmenu, setNavmenu] = useState(false);
+  const navVars = {
+    initial: {
+      scaleY: 0,
+    },
+    animate: {
+      scaleY: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+    exit: {
+      scaleY: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
     <div className="flex h-[90px] w-full items-center justify-between bg-[#1f2937] px-5 shadow-lg md:justify-around">
       <img className="h-8" src={logo} alt="the-dubbery_logo" />
@@ -48,7 +63,12 @@ const Navbar = () => {
         )}
         <div>
           {navmenu && (
-            <div className="absolute left-0 top-[90px] flex h-[calc(100vh-90px)] w-full flex-col items-center justify-center gap-10 bg-black text-xl text-white">
+            <motion.div
+            variants={navVars}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="absolute left-0 top-[90px] flex h-[calc(100vh-90px)] w-full flex-col items-center justify-center gap-10 bg-black text-xl text-white">
               <a className="hover:underline" href="#">
                 Home
               </a>
@@ -64,7 +84,7 @@ const Navbar = () => {
               <button className="rounded-lg bg-[#3869e7] px-5 py-1 text-lg text-white shadow-md duration-300 hover:bg-[#1345c5]">
                 Explore all services
               </button>
-            </div>
+            </motion.div>
           )}
         </div>
       </div>
