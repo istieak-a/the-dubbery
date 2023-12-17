@@ -7,7 +7,7 @@ const Home = () => {
         <h1 className="font-gilroy xl:w-[70%] text-5xl font-black md:text-7xl xl:text-8xl">
           Meet with your global audience!
         </h1>
-        <p className="w-1/2 text-xs">Break language barriers and connect with a global audience! Our audio translation services bring your content to life in multiple languages, ensuring your message resonates worldwide. Welcome to a new era of limitless reach and cross-cultural impact!</p>
+        <p className="w-1/2 text-xs line-clamp-3">Break language barriers and connect with a global audience! Our audio translation services bring your content to life in multiple languages, ensuring your message resonates worldwide. Welcome to a new era of limitless reach and cross-cultural impact!</p>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}

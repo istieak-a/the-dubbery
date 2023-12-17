@@ -3,7 +3,7 @@ import React from 'react'
 const AboutSection = () => {
   return (
     <div className='h-screen'>
-      This is about
+      <h1>About Us</h1>
     </div>
   )
 }
