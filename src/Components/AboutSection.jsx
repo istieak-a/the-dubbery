@@ -24,7 +24,7 @@ const AboutSection = () => {
   const aboutData = [
     {title: "Our Story", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, dolorem dolore doloribus consequatur dolor animi dicta esse repellendus necessitatibus quos!", img: "../assets/ourStory.svg"},
     {title: "Our Mission", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, dolorem dolore doloribus consequatur dolor animi dicta esse repellendus necessitatibus quos!", img: "../assets/ourMission.svg"},
-    {title: "Our Vision", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, dolorem dolore doloribus consequatur dolor animi dicta esse repellendus necessitatibus quos!", img: "E:/The Dubbery File\the-dubbery/src/assets/vision.svg"},
+    {title: "Our Vision", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, dolorem dolore doloribus consequatur dolor animi dicta esse repellendus necessitatibus quos!", img: "../assets/ourVision.svg"},
   ]
   return (
     <div className="h-screen">
