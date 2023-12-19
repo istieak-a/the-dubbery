@@ -5,6 +5,7 @@ import ServicePage from "./Components/ServicePage";
 import ContactPage from "./Components/ContactPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/services" element={<ServicePage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 };
