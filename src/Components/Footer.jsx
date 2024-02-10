@@ -98,10 +98,10 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
                 Resources
               </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
-                <li className="mb-4">
+              <ul className="text-gray-600 flex flex-col gap-4 dark:text-gray-400">
+                <li>
                   <a href="https://thedubbery.com" className="hover:underline">
-                    Flowbite
+                    About
                   </a>
                 </li>
                 <li>
@@ -109,8 +109,11 @@ const Footer = () => {
                     href="https://tailwindcss.com/"
                     className="hover:underline"
                   >
-                    Tailwind CSS
+                    Services
                   </a>
+                </li>
+                <li>
+                  <a href="#">Jobs</a>
                 </li>
               </ul>
             </div>

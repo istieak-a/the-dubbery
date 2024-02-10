@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="flex h-[calc(100vh-90px)] w-full items-center justify-center bg-[#101827] text-white">
@@ -8,6 +9,7 @@ const Home = () => {
           Meet with your global audience!
         </h1>
         <p className="w-1/2 text-xs line-clamp-3">Break language barriers and connect with a global audience! Our audio translation services bring your content to life in multiple languages, ensuring your message resonates worldwide. Welcome to a new era of limitless reach and cross-cultural impact!</p>
+        <Link to={`/services`}>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -15,6 +17,7 @@ const Home = () => {
         >
           Explore all services
         </motion.button>
+        </Link>
       </div>
     </div>
   );

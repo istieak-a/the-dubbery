@@ -27,7 +27,9 @@ const Navbar = () => {
   };
   return (
     <div className="flex h-[90px] w-full items-center justify-between bg-[#1f2937] px-5 shadow-lg md:justify-around">
-      <img className="h-8" src={logo} alt="the-dubbery_logo" />
+      <Link to={`/`}>
+        <img className="h-8" src={logo} alt="the-dubbery_logo" />
+      </Link>
       <div className="hidden gap-10 text-lg font-medium text-white md:flex xl:flex">
         <Link to={`/home`} className="hover:underline" href="#">
           Home
@@ -43,13 +45,15 @@ const Navbar = () => {
         </Link>
       </div>
       <div>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="hidden rounded-lg bg-[#3869e7] px-5 py-1 text-lg text-white shadow-md duration-300 hover:bg-[#1345c5] md:block"
-        >
-          Get in touch
-        </motion.button>
+        <Link to={`/contact`}>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="hidden rounded-lg bg-[#3869e7] px-5 py-1 text-lg text-white shadow-md duration-300 hover:bg-[#1345c5] md:block"
+          >
+            Get in touch
+          </motion.button>
+        </Link>
         {navmenu ? (
           <RxCross2
             onClick={() => setNavmenu(!navmenu)}
@@ -69,7 +73,7 @@ const Navbar = () => {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="origin-top absolute left-0 top-[90px] flex h-[calc(100vh-90px)] w-full flex-col items-center justify-center gap-10 bg-black text-xl text-white"
+                className="absolute left-0 top-[90px] flex h-[calc(100vh-90px)] w-full origin-top flex-col items-center justify-center gap-10 bg-black text-xl text-white"
               >
                 <a className="hover:underline" href="#">
                   Home
@@ -83,9 +87,11 @@ const Navbar = () => {
                 <a className="hover:underline" href="#">
                   Contact
                 </a>
-                <button className="rounded-lg bg-[#3869e7] px-5 py-1 text-lg text-white shadow-md duration-300 hover:bg-[#1345c5]">
-                  Explore all services
-                </button>
+                <Link to={`/services`}>
+                  <button className="rounded-lg bg-[#3869e7] px-5 py-1 text-lg text-white shadow-md duration-300 hover:bg-[#1345c5]">
+                    Explore all services
+                  </button>
+                </Link>
               </motion.div>
             )}
           </AnimatePresence>
