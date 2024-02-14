@@ -11,8 +11,8 @@ const contactData = [
   },
   {
     icon: <FaPhone />,
-    link: "tel:+1234567890",
-    name: "+1234567890",
+    link: "tel:+8801301243863",
+    name: "+880 13012 43863",
   },
   {
     icon: <IoLocationSharp />,

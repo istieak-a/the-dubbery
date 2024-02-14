@@ -1,0 +1,15 @@
+.card-container:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s ease all;
+    cursor: pointer;
+    background: #3d67ff;
+    color: white
+}
+.card-container:hover .card-title{
+    color: white;
+}
+.card-container:hover button{
+    background: white;
+    color: #3d67ff;
+    transition: 0.3s ease all;
+}

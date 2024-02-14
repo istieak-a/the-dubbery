@@ -1,6 +1,6 @@
 import React from "react";
-import wave from "../assets/wave.svg";
-import artist from "../assets/voice_artist.png";
+import wave from "../../assets/wave.svg";
+import artist from "../../assets/voice_artist.png";
 const AboutSection = () => {
   return (
     <div className=" bg-[#F8F8FF]">

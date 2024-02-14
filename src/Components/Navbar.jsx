@@ -31,7 +31,7 @@ const Navbar = () => {
         <img className="h-8" src={logo} alt="the-dubbery_logo" />
       </Link>
       <div className="hidden gap-10 text-lg font-medium text-white md:flex xl:flex">
-        <Link to={`/home`} className="hover:underline" href="#">
+        <Link to={`/`} className="hover:underline" href="#">
           Home
         </Link>
         <Link to={`/about`} className="hover:underline" href="#">
