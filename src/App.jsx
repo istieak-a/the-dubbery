@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./Components/Home/Home"
 import AboutPage from "./Components/AboutPage";
-import ServicePage from "./Components/ServicePage";
+import ServicePage from "./Components/Services/ServicePage";
 import ContactPage from "./Components/ContactPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
