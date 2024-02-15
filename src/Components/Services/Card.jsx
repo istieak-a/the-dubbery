@@ -7,8 +7,8 @@ const Card = ({ img, title, desc }) => {
         <img className="w-[35%] object-cover" src={img} alt="" />
       </div>
       <div className="h-[60%] flex gap-3 flex-col justify-center items-center">
-        <h1 className="text-xl font-semibold">{title}</h1>
-        <p className="text-sm text-center">{desc}</p>
+        <h1 className="text-sm md:text-xl font-semibold">{title}</h1>
+        <p className="text-xs md:text-sm text-center">{desc}</p>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../images/logo.png";
 const Footer = () => {
   return (
-    <footer className="bg-white p-4 dark:bg-gray-800 sm:p-6 md:px-20 md:py-10">
+    <footer className="bg-white px-10 py-20 dark:bg-gray-800 sm:p-6 md:px-20 md:py-10">
       <div className="mx-auto max-w-screen-xl">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
