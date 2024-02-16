@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ img, title, desc }) => {
   return (
-    <div className="w-[400px] flex flex-col gap-10 shadow-xl p-10 rounded-xl">
+    <div className="w-[400px] flex flex-col gap-10 shadow-xl p-10 rounded-xl hover:drop-shadow-2xl">
       <div className="h-[40%] flex items-center justify-center">
         <img className="w-[35%] object-cover" src={img} alt="" />
       </div>

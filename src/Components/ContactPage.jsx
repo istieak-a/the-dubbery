@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
+import emailjs from '@emailjs/browser';
 
 const contactData = [
   {
@@ -22,6 +23,24 @@ const contactData = [
 ];
 
 const ContactPage = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_t6ataqb", "template_s99ikhs", form.current, {
+        publicKey: "YVsWeneB0Y7l_6U20",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        },
+      );
+  };
   return (
     <div className="bg-[#f8f8ff]">
       <section className="bg-[#1f2937] py-10 text-white">
@@ -54,7 +73,7 @@ const ContactPage = () => {
             // width="600"
             // height="450"
             // style="border:0"
-            allowfullscreen=""
+            // allowfullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="mt-10 h-[300px] w-full rounded-xl shadow-xl"
@@ -68,28 +87,33 @@ const ContactPage = () => {
             We are always looking for new ideas and collaborations. If you have
             a project in mind, we would love to hear from you.
           </p>
-          <div>
+          <form ref={form} onSubmit={sendEmail}>
             <input
               type="text"
               placeholder="Your Name"
+              name="user_name"
               className="border-grey mt-5 w-full rounded-xl border px-5 py-3 md:w-[70%]"
             />
             <input
               type="text"
               placeholder="Your Email"
+              name="user_email"
               className="border-grey mt-5 w-full rounded-xl border px-5 py-3 md:w-[70%]"
             />
             <textarea
-              name=""
+              name="message"
               id=""
               rows="5"
               placeholder="Your Message"
               className="border-grey mt-5 w-full rounded-xl border px-5 py-3 md:w-[70%]"
             ></textarea>
-            <button className="mt-5 w-full rounded-xl bg-[#3869e7] p-3 text-white hover:bg-[#1345c5] md:w-[70%]">
+            <button
+              type="submit"
+              className="mt-5 w-full rounded-xl bg-[#3869e7] p-3 text-white hover:bg-[#1345c5] md:w-[70%]"
+            >
               Send Message
             </button>
-          </div>
+          </form>
         </div>
       </section>
     </div>
