@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../images/logo.png";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-white px-10 py-20 dark:bg-gray-800 sm:p-6 md:px-20 md:py-10">
@@ -106,44 +107,40 @@ const Footer = () => {
               </h2>
               <ul className="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
                 <li>
-                  <a href="https://thedubbery.com" className="hover:underline">
+                  <Link to={`/about`} className="hover:underline">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
+                  <Link to={`/services`} className="hover:underline">
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">Jobs</a>
+                  <Link to={`/contact`} className="hover:underline">
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
-                Follow us
+                Others
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
-                  <a
-                    href="https://github.com/themesberg/flowbite"
-                    className="hover:underline "
-                  >
-                    Github
-                  </a>
+                  <Link to={`/career`} className="hover:underline">
+                    Career
+                  </Link>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href="https://discord.gg/4eeurUVvTy"
                     className="hover:underline"
                   >
                     Discord
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div>

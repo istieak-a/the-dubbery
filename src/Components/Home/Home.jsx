@@ -2,7 +2,7 @@ import React from "react";
 import Hero1 from "./Hero1";
 import AboutSection from "./AboutSection";
 import ServiceSection from "./ServiceSection";
-import InviteSection from "./InviteSection";
+// import InviteSection from "./InviteSection";
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
       <Hero1 />
       <AboutSection />
       <ServiceSection />
-      <InviteSection />
+      {/* <InviteSection /> */}
     </>
   );
 };

@@ -7,8 +7,8 @@ import emailjs from '@emailjs/browser';
 const contactData = [
   {
     icon: <MdEmail />,
-    link: "mailto:sales@thedubbery.com",
-    name: "sales@thedubbery.com",
+    link: "mailto:contact@thedubbery.com",
+    name: "contact@thedubbery.com",
   },
   {
     icon: <FaPhone />,
